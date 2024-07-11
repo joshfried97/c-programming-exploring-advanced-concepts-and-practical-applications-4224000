@@ -20,7 +20,7 @@ void *thread_funct(void *a)
 int main()
 {
     char buffer[BUFSIZ];
-    int r;
+    int r1,r2;
     pthread_t thd1,thd2;
 
     /* spawn the new thread */
@@ -32,7 +32,7 @@ int main()
     }
 
     r = pthread_create( &thd2, NULL, thread_funct, "###");
-    if( r!=0 )
+    if( r1!=0 || r2!=0 )
     {
         perror("Thread");
         exit(1);
