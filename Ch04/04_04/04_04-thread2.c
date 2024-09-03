@@ -24,14 +24,8 @@ int main()
     pthread_t thd1,thd2;
 
     /* spawn the new thread */
-    r = pthread_create( &thd1, NULL, thread_funct, "***");
-    if( r!=0 )
-    {
-        perror("Thread");
-        exit(1);
-    }
-
-    r = pthread_create( &thd2, NULL, thread_funct, "###");
+    r1 = pthread_create( &thd2, NULL, thread_funct, "***");
+    r2 = pthread_create( &thd2, NULL, thread_funct, "###");
     if( r1!=0 || r2!=0 )
     {
         perror("Thread");
