@@ -4,7 +4,8 @@
 int main()
 {
     puts("Search path:");
-    printf("%s\n",getenv("PATH"));
+    // Much more efficient method for getting the PATH var
+    printf("%s\n", getenv("PATH"));
 
     return 0;
 }

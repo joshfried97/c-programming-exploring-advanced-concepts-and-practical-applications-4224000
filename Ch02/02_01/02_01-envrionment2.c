@@ -8,6 +8,7 @@ int main()
 
     while( *environ )
     {
+        // This only ensures we print the strings associated with the PATH var
         if( strncmp(*environ,"PATH",4)==0 )
         {
             printf("%s\n",*environ);
